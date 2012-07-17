@@ -47,7 +47,7 @@ https://www.assaydepot.com/api/providers.json?q=assay
 {% endhighlight %}
 
 ### Vendor Search Return Value
-This will return
+This will return:
 
 {% highlight javascript %}
 {
@@ -118,6 +118,56 @@ This will return
 }
 {% endhighlight %}
 
+### Vendor Details
+Get queries take the form:
+
+{% highlight bash %}
+https://www.assaydepot.com/api/providers/[provider_id].json
+{% endhighlight %}
+
+### Vendor Details Return Value
+This will return:
+
+{% highlight javascript %}
+{
+  "query_time":0.026702252,
+  "provider":{
+    "id":"ae82d9d2c9dd4902be154a3202646689",
+    "slug":"assay-depot",
+    "name":"Assay Depot",
+    "phone_number":"(877)644-3044",
+    "website":"http://www.assaydepot.com",
+    "service_areas":[],
+    "headquarters":"San Diego,
+     California,
+     USA",
+    "laboratories":[],
+    "year_established":"2007",
+    "number_of_employees":"10",
+    "description":
+      "!<http://backoffice.assaydepot.com/assets/depot-wares/ae82d9d2c9dd4902be154a3202646689/logo.png(Assay Depot Logo)!:http://www.assaydepot.com\r\n\r\np<>. *Assay Depot* has created the world\u2019s largest network of public and private cloud-based research exchanges. Researchers from around the world use the public research exchange to find,
+      compare and purchase research services,
+      ...
+      ",
+    "keywords":[],
+    "certifications":[],
+    "professional_associations":[],
+    "permission":"in-network",
+    "origin":"central",
+    "green":false,
+    "green_explaination":null,
+    "diversity":false,
+    "diversity_explaination":null,
+    "created_at":"2009-07-15T22:11:12+00:00",
+    "updated_at":"2012-05-11T23:23:40Z",
+    "urls": {
+      "storefront":"https://www.assaydepot.com/provider/assay-depot",
+      "backoffice":"https://backoffice.assaydepot.com/providers/assay-depot/edit"
+    }
+  }
+}
+{% endhighlight %}
+
 ## Services
 There are two functions you can perform on services, search and get. 
 
@@ -129,7 +179,7 @@ https://www.assaydepot.com/api/wares.json?q=assay
 {% endhighlight %}
 
 ### Service Search Return Value
-This will return
+This will return:
 
 {% highlight javascript %}
 { 
@@ -187,3 +237,61 @@ This will return
 }
 {% endhighlight %}
 
+### Service Details
+Get queries take the form:
+
+{% highlight bash %}
+https://www.assaydepot.com/api/wares/[provider_id].json
+{% endhighlight %}
+
+### Service Details Return Value
+This will return:
+
+{% highlight javascript %}
+{
+  "query_time":0.005992268,
+  "ware":{
+    "id":"36aa2c0aa802cd048206c619a9689918",
+    "slug":"antibody-services",
+    "name":"Antibody Services",
+    "price":0.0,
+    "turn_around_time": {
+      "max":0,
+      "min":0,
+      "display_units":"hours"
+    },
+    "type":"CustomService",
+    "snippet":"Request information or a price quote for Antibody Services",
+    "description":
+      "<img src=\"https://backoffice.assaydepot.com/files/depot-wares/36aa2c0aa802cd048206c619a9689918/antibody-services2.png\" alt=\"Antibody Services Image\" style=\"margin-right: 10px; width: 90px; float: left;\" />\r\n\r\n\r\np<>. If you'd like to narrow down the type of service or product you are looking for,
+       choose from one of our Antibody Subcategories below. If you're unsure what you need,
+       ...
+       ",
+    "contact_emails":[],
+    "responsible_emails":[],
+    "permission":"read",
+    "first_published_at":null,
+    "protein_type":null,
+    "clonality":null,
+    "cell_source":null,
+    "species":[],
+    "tissue":null,
+    "amount":null,
+    "protein_tag":null,
+    "antigen_species":null,
+    "product_applications":[],
+    "ig_type":null,
+    "purification_method":null,
+    "peptide_type":null,
+    "cas_number":null,
+    "unspsc":"",
+    "supplier_part_id":"",
+    "created_at":"2009-10-07T00:26:00+00:00",
+    "updated_at":"2012-07-13T15:33:57Z",
+    "urls": {
+      "storefront":"https://www.assaydepot.com/service/antibody-services",
+      "backoffice":"https://backoffice.assaydepot.com/wares/antibody-services/edit"
+    }
+  }
+}
+{% endhighlight %}
