@@ -3,7 +3,7 @@ layout: default
 title: Assay Depot's JSON API
 ---
 
-# Welcome to Assay Depot's JSON API Documentation
+# Assay Depot's JSON API Documentation
 Assay Depot's JSON API gives read-only access to vendors and services. To use the API you must have a developer authentication token. During the pre-release period, please contact cpetersen@assaydepot.com to obtain a token.
 
 ## Location
