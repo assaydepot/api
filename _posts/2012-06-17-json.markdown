@@ -28,6 +28,13 @@ You can specify the authentication token on the query string using the `auth_tok
 https://www.assaydepot.com/api?auth_token=1234567890
 ```
 
-The authentication token is only strictly required for the first request of the session, but you may include it with every request.
+The authentication token is only strictly required for the first request of the session, but you may include it with every request. All examples assume the user has successfully authenticated.
 
 ## Vendors
+There are two functions you can perform on vendors, search and get. 
+
+### Vendor Search
+Search queries take the form:
+```
+https://www.assaydepot.com/api/providers.json?q=assay
+```
