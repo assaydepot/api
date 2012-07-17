@@ -6,7 +6,7 @@ title: Assay Depot's JSON API
 # Assay Depot's JSON API Documentation
 Assay Depot's JSON API gives read-only access to vendors and services. To use the API you must have a developer authentication token. During the pre-release period, please contact cpetersen@assaydepot.com to obtain a token.
 
-## Location
+{#location}## Location
 The API is accessible at `/api` on whatever website you use. For instance, public marketplace customers (users of http://www.assaydepot.com) can access the api at:
 
 {% highlight bash %}
@@ -25,7 +25,7 @@ And private RX customers can access the api using their custom url:
 https://[custom].assaydepot.com/api
 {% endhighlight %}
 
-## Authentication
+{#authentication}## Authentication
 The API requires the user to authenticate. For convenience you may authenticate using a token associated with your account. During the pre-release period, please contact cpetersen@assaydepot.com to obtain a token.
 
 You can specify the authentication token on the query string using the `auth_token` query parameter. For instance:
@@ -36,17 +36,17 @@ https://www.assaydepot.com/api?auth_token=1234567890
 
 The authentication token is only strictly required for the first request of the session, but you may include it with every request. All examples assume the user has successfully authenticated.
 
-## Vendors
+{#vendors}## Vendors
 There are two functions you can perform on vendors, search and get. 
 
-### Vendor Search Query
+{#vendor-search}### Vendor Search Query
 Search queries take the form:
 
 {% highlight bash %}
 https://www.assaydepot.com/api/providers.json?q=assay
 {% endhighlight %}
 
-### Vendor Search Return Value
+{#vendor-search-results}### Vendor Search Return Value
 This will return:
 
 {% highlight javascript %}
@@ -118,14 +118,14 @@ This will return:
 }
 {% endhighlight %}
 
-### Vendor Details
+{#vendor-details}### Vendor Details
 Get queries take the form:
 
 {% highlight bash %}
 https://www.assaydepot.com/api/providers/[provider_id].json
 {% endhighlight %}
 
-### Vendor Details Return Value
+{#vendor-detail-results}### Vendor Details Return Value
 This will return:
 
 {% highlight javascript %}
@@ -168,17 +168,17 @@ This will return:
 }
 {% endhighlight %}
 
-## Services
+{#services}## Services
 There are two functions you can perform on services, search and get. 
 
-### Service Search Query
+{#service-search}### Service Search Query
 Search queries take the form:
 
 {% highlight bash %}
 https://www.assaydepot.com/api/wares.json?q=assay
 {% endhighlight %}
 
-### Service Search Return Value
+{#service-search-results}### Service Search Return Value
 This will return:
 
 {% highlight javascript %}
@@ -237,14 +237,14 @@ This will return:
 }
 {% endhighlight %}
 
-### Service Details
+{#service-details}### Service Details
 Get queries take the form:
 
 {% highlight bash %}
 https://www.assaydepot.com/api/wares/[provider_id].json
 {% endhighlight %}
 
-### Service Details Return Value
+{#service-detail-results}### Service Details Return Value
 This will return:
 
 {% highlight javascript %}
