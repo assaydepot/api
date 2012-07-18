@@ -488,8 +488,8 @@ This will return:
 {% endhighlight %}
 
 <h2 id="bringing-it-all-together">Bringing It All Together</h2>
-Any number of options can be combined in a single query. For instance, the following (contrived) example, lists the first page of services that match the string "fluid" and are associated with the species Human. It also sets the page size to 2.
+Any number of options can be combined in a single query. For instance, the following (contrived) example, lists the first page of services that match the string "fluid" and are associated with the species Human. It also sets the page size to 2 and the authentication token to 1234567890.
 
 {% highlight bash %}
-https://www.assaydepot.com/api/wares.json?q=fluid&facets[species][]=Human&page=1&per_page=2
+https://www.assaydepot.com/api/wares.json?q=fluid&facets[species][]=Human&page=1&per_page=2&auth_token=1234567890
 {% endhighlight %}
