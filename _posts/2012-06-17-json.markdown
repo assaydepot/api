@@ -72,7 +72,7 @@ https://www.assaydepot.com/api/providers.json?q=assay
     <tr>
       <td>facets</td>
       <td>nil</td>
-      <td>You can refine the result set by specifying facet values. See the <a href="#vendor-search-facets">facets section</a> for more information.</td>
+      <td>You can refine the result set by specifying facet values. See the <a href="#vendor-search-facets">vendor search facets section</a> for more information.</td>
     </tr>
   </tbody>
 </table>
@@ -238,7 +238,7 @@ https://www.assaydepot.com/api/wares.json?q=assay
     <tr>
       <td>facets</td>
       <td>nil</td>
-      <td>You can refine the result set by specifying facet values. See the <a href="#service-search-facets">facets section</a> for more information.</td>
+      <td>You can refine the result set by specifying facet values. See the <a href="#service-search-facets">service search facets section</a> for more information.</td>
     </tr>
   </tbody>
 </table>
@@ -309,7 +309,7 @@ This will return:
 Get queries take the form:
 
 {% highlight bash %}
-https://www.assaydepot.com/api/wares/[provider_id].json
+https://www.assaydepot.com/api/wares/[ware_id].json
 {% endhighlight %}
 
 <h3 id="service-detail-results">Service Details Return Value</h3>
