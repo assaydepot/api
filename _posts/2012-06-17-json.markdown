@@ -89,6 +89,9 @@ facets[available_provider_names][]=Assay+Depot
 
 You may specify multiple facets in a single query. It's important to note, unlike the query string, facet values must match exactly.
 
+<h3 id="vendor-search-facets">Vendor Search Facets Values</h3>
+There are numerous facets that can be specified. Below is a table of a few interesting facets. Search results contain lists of all the applicable facet names and values, you should consult these results for a more complete list.
+
 <table>
   <tbody>
     <tr>
@@ -102,18 +105,6 @@ You may specify multiple facets in a single query. It's important to note, unlik
         Narrow the results to only vendors that are members of a particular association. Currently, only BIOCOM is supported.
       </td>
     </tr><tr>
-      <td>provider_name</td>
-      <td>
-        <ul>
-          <li>Assay Depot</li>
-          <li>WuXi AppTec</li>
-          <li>...</li>
-        </ul>
-      </td>
-      <td>
-        Narrow the results to only vendors whose name match the given value.
-      </td>
-    </tr><tr>
       <td>category_names</td>
       <td>
         <ul>
@@ -125,6 +116,32 @@ You may specify multiple facets in a single query. It's important to note, unlik
       </td>
       <td>
         Narrow the results to only vendors who appear in a certain discipline, category or subcategory on the site.
+      </td>
+    </tr><tr>
+      <td>certifications</td>
+      <td>
+        <ul>
+          <li>AAALAC</li>
+          <li>GLP</li>
+          <li>ISO 9001</li>
+          <li>...</li>
+        </ul>
+      </td>
+      <td>
+        Narrow the results to only vendors who have specific certifications.
+      </td>
+    </tr><tr>
+      <td>countries_facet</td>
+      <td>
+        <ul>
+          <li>United States</li>
+          <li>China</li>
+          <li>Great Britain</li>
+          <li>...</li>
+        </ul>
+      </td>
+      <td>
+        Narrow the results to only vendors who have offices or laboratories in certain countries.
       </td>
     </tr>
   </tbody>
@@ -304,6 +321,54 @@ https://www.assaydepot.com/api/wares.json?facets[available_provider_names][]=Ass
 
 You may specify multiple facets in a single query. It's important to note, unlike the query string, facet values must match exactly.
 
+<h3 id="service-search-facets">Service Search Facets Values</h3>
+There are numerous facets that can be specified. Below is a table of a few interesting facets. Search results contain lists of all the applicable facet names and values, you should consult these results for a more complete list.
+
+<table>
+  <tbody>
+    <tr>
+      <td>protein_type</td>
+      <td>
+        <ul>
+          <li>Enzymes</li>
+          <li>Bacterial and Viral Antigens</li>
+          <li>Growth Factors</li>
+          <li>...</li>
+        </ul>
+      </td>
+      <td>
+        Narrow the results to only services listing a specific type of protein.
+      </td>
+    </tr><tr>
+      <td>species</td>
+      <td>
+        <ul>
+          <li>Human</li>
+          <li>Treponema pallidum</li>
+          <li>Dengue virus</li>
+          <li>...</li>
+        </ul>
+      </td>
+      <td>
+        Narrow the results to only services associated with a certain species.
+      </td>
+    </tr><tr>
+      <td>available_provider_names</td>
+      <td>
+        <ul>
+          <li>Ricerca Biosciences</li>
+          <li>GVK Biosciences</li>
+          <li>Charles River Laboratories</li>
+          <li>...</li>
+        </ul>
+      </td>
+      <td>
+        Narrow the results to only services that are offered by a particular vendor.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 <h3 id="service-search-results">Service Search Return Value</h3>
 This will return:
 
@@ -420,4 +485,11 @@ This will return:
     }
   }
 }
+{% endhighlight %}
+
+<h2 id="bringing-it-all-together">Bringing It All Together</h2>
+Any number of options can be combined in a single query. For instance, the following (contrived) example, lists the first page of services that match the string "fluid" and are associated with the species Human. It also sets the page size to 2.
+
+{% highlight bash %}
+https://www.assaydepot.com/api/wares.json?facets[species][]=Human&q=fluid&page=1&per_page=2
 {% endhighlight %}
