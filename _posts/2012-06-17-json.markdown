@@ -19,7 +19,7 @@ Vendors can access the api at:
 https://backoffice.assaydepot.com/api
 {% endhighlight %}
 
-And private RX customers can access the api using their custom url:
+And private RX customers can access the api using their custom URL:
 
 {% highlight bash %}
 https://[custom].assaydepot.com/api
@@ -74,7 +74,61 @@ https://www.assaydepot.com/api/providers.json?q=assay
 </table>
 
 <h3 id="vendor-search-facets">Vendor Search Facets</h3>
-TODO
+Vendor search results can be refined using facets. To apply a facet to a search use a URL in the following format:
+
+{% highlight bash %}
+https://www.assaydepot.com/api/providers.json?facets[facet_name][]=facet_value
+{% endhighlight %}
+
+For instance, if you wanted find vendors that are members of BIOCOM, you would use the following URL:
+
+{% highlight bash %}
+https://www.assaydepot.com/api/providers.json?facets[professional_associations][]=BIOCOM
+facets[available_provider_names][]=Assay+Depot
+{% endhighlight %}
+
+You may specify multiple facets in a single query. It's important to note, unlike the query string, facet values must match exactly.
+
+<table>
+  <tbody>
+    <tr>
+      <td>professional_associations</td>
+      <td>
+        <ul>
+          <li>BIOCOM</li>
+        </ul>
+      </td>
+      <td>
+        Narrow the results to only vendors that are members of a particular association. Currently, only BIOCOM is supported.
+      </td>
+    </tr><tr>
+      <td>provider_name</td>
+      <td>
+        <ul>
+          <li>Assay Depot</li>
+          <li>WuXi AppTec</li>
+          <li>...</li>
+        </ul>
+      </td>
+      <td>
+        Narrow the results to only vendors whose name match the given value.
+      </td>
+    </tr><tr>
+      <td>category_names</td>
+      <td>
+        <ul>
+          <li>Biology</li>
+          <li>Biomarkers</li>
+          <li>Clinical Chemistry</li>
+          <li>...</li>
+        </ul>
+      </td>
+      <td>
+        Narrow the results to only vendors who appear in a certain discipline, category or subcategory on the site.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="vendor-search-results">Vendor Search Return Value</h3>
 This will return:
@@ -236,7 +290,19 @@ https://www.assaydepot.com/api/wares.json?q=assay
 </table>
 
 <h3 id="service-search-facets">Service Search Facets</h3>
-TODO
+Service search results can be refined using facets. To apply a facet to a search use a URL in the following format:
+
+{% highlight bash %}
+https://www.assaydepot.com/api/wares.json?facets[facet_name][]=facet_value
+{% endhighlight %}
+
+For instance, if you wanted find services where Assay Depot was available as a provider, you would use the URL:
+
+{% highlight bash %}
+https://www.assaydepot.com/api/wares.json?facets[available_provider_names][]=Assay+Depot
+{% endhighlight %}
+
+You may specify multiple facets in a single query. It's important to note, unlike the query string, facet values must match exactly.
 
 <h3 id="service-search-results">Service Search Return Value</h3>
 This will return:
