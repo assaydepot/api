@@ -84,7 +84,6 @@ For instance, if you wanted find vendors that are members of BIOCOM, you would u
 
 {% highlight bash %}
 https://www.assaydepot.com/api/providers.json?facets[professional_associations][]=BIOCOM
-facets[available_provider_names][]=Assay+Depot
 {% endhighlight %}
 
 You may specify multiple facets in a single query. It's important to note, unlike the query string, facet values must match exactly.
