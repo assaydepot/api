@@ -54,22 +54,18 @@ https://www.assaydepot.com/api/providers.json?q=assay
       <td>1</td>
       <td>When there are more results than can fit on a single page, you can retrieve different pages by changing this parameter.</td>
     </tr><tr>
-    <tr>
       <td>per_page</td>
       <td>25</td>
       <td>You can change the number of results returned per request by changing this parameter.</td>
     </tr><tr>
-    <tr>
       <td>sort_by</td>
       <td>nil (relevance)</td>
       <td>You can change the order in which results are returned. This orders the entire result set, not just the current page.</td>
     </tr><tr>
-    <tr>
       <td>sort_order</td>
       <td>desc</td>
       <td>Change the direction of the result set</td>
     </tr><tr>
-    <tr>
       <td>facets</td>
       <td>nil</td>
       <td>You can refine the result set by specifying facet values. See the <a href="#vendor-search-facets">vendor search facets section</a> for more information.</td>
@@ -220,22 +216,18 @@ https://www.assaydepot.com/api/wares.json?q=assay
       <td>1</td>
       <td>When there are more results than can fit on a single page, you can retrieve different pages by changing this parameter.</td>
     </tr><tr>
-    <tr>
       <td>per_page</td>
       <td>25</td>
       <td>You can change the number of results returned per request by changing this parameter.</td>
     </tr><tr>
-    <tr>
       <td>sort_by</td>
       <td>nil (relevance)</td>
       <td>You can change the order in which results are returned. This orders the entire result set, not just the current page.</td>
     </tr><tr>
-    <tr>
       <td>sort_order</td>
       <td>desc</td>
       <td>Change the direction of the result set</td>
     </tr><tr>
-    <tr>
       <td>facets</td>
       <td>nil</td>
       <td>You can refine the result set by specifying facet values. See the <a href="#service-search-facets">service search facets section</a> for more information.</td>
