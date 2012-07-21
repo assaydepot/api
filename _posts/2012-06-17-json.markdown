@@ -43,8 +43,17 @@ There are two functions you can perform on vendors, search and get.
 Search queries take the form:
 
 {% highlight bash %}
-https://www.assaydepot.com/api/providers.json?q=assay
+https://www.assaydepot.com/api/providers.json?q=[query term]
 {% endhighlight %}
+
+For example, to search for vendors that match the term "antibody", you would use the url:
+
+{% highlight bash %}
+https://www.assaydepot.com/api/providers.json?q=antibody
+{% endhighlight %}
+
+The system will search for the word antibody or it's synonyms in all applicable vendor fields.
+
 
 <h3 id="vendor-search-options">Vendor Search Query Options</h3>
 <table>
@@ -275,8 +284,16 @@ There are two functions you can perform on services, search and get.
 Search queries take the form:
 
 {% highlight bash %}
-https://www.assaydepot.com/api/wares.json?q=assay
+https://www.assaydepot.com/api/wares.json?q=[query terms]
 {% endhighlight %}
+
+For example, to search for services that match the term "peptide", you would use the url:
+
+{% highlight bash %}
+https://www.assaydepot.com/api/wares.json?q=peptide
+{% endhighlight %}
+
+The system will search for the word antibody or it's synonyms in all applicable service fields.
 
 <h3 id="service-search-options">Service Search Query Options</h3>
 <table>
