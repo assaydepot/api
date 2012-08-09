@@ -28,10 +28,10 @@ https://[custom].assaydepot.com/api
 <h2 id="authentication">Authentication</h2>
 The API requires the user to authenticate. For convenience you may authenticate using a token associated with your account. During the pre-release period, please contact [cpetersen@assaydepot.com](mailto:cpetersen@assaydepot.com) to obtain a token.
 
-You can specify the authentication token on the query string using the `auth_token` query parameter. For instance:
+You can specify the authentication token on the query string using the `access_token` query parameter. For instance:
 
 {% highlight bash %}
-https://www.assaydepot.com/api/[resource].json?auth_token=1234567890
+https://www.assaydepot.com/api/[resource].json?access_token=1234567890
 {% endhighlight %}
 
 The authentication token is only strictly required for the first request of the session, but you may include it with every request. All examples assume the user has successfully authenticated.
@@ -507,5 +507,5 @@ This will return:
 Any number of options can be combined in a single query. For instance, the following (contrived) example, lists the first page of services that match the string "fluid" and are associated with the species Human. It also sets the page size to 2 and the authentication token to 1234567890.
 
 {% highlight bash %}
-https://www.assaydepot.com/api/wares.json?q=fluid&facets[species][]=Human&page=1&per_page=2&auth_token=1234567890
+https://www.assaydepot.com/api/wares.json?q=fluid&facets[species][]=Human&page=1&per_page=2&access_token=1234567890
 {% endhighlight %}
