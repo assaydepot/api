@@ -389,58 +389,89 @@ There are numerous facets that can be specified. Below is a table of a few inter
 This will return:
 
 {% highlight javascript %}
-{ 
-  "total":749,
-  "page":1,
-  "per_page":25,
-  "query_time":0.039221109,
+{
+  "total": 8551,
+  "page": 1,
+  "per_page": 25,
+  "query_time": 0.31529539400000001,
   "facets": {
     "source": {
-      "External":749
+      "External": 8551
     },
     "ware_type": {
-      "CustomService":416,
-      "Service":229,
-      "Product":103,
-      "Consultant":1
+      "Product": 3914,
+      "CustomService": 3427,
+      ...
+    },
+    "available_provider_names": {
+      "Acme Bioscience": 4475,
+      ...
+    },
+    "certifications": {},
+    "countries": {
+      "United States": 418,
+      "Canada": 14,
+      "India": 8,
+      "Netherlands": 6,
+      ...
     },
     ...
   },
   "ware_refs": [
     {
-      "id":"071daaf464a9ed7ce0990e5471827f82",
-      "slug":"peroxidase-assay",
-      "name":"Peroxidase Assay",
-      "price":15.0,
-      "type":"Service",
-      "turn_around_time":null,
-      "snippet":"BioAssay Systems' peroxidase assays are robust colorimetric/fluorimetric assays.",
-      "provider_ids":[ "8e39547108653317bb668eb774f31a01" ],
-      "provider_names":[ "BioAssay Systems" ],
-      "score":3.5326707,
+      "id": "1207da8eb6d0af5eb153c5146f4a6823",
+      "slug": "90-d-subchronic-tox-study-mouse7",
+      "name": "90-d Subchronic Tox Study - Mouse",
+      "price": 0.0,
+      "average_rating": null,
+      "type": "Service",
+      "turn_around_time": null,
+      "snippet": "90-day subchronic tox study in 100 mice evaluates dose-effect, organ selectivity and NOAEL (GLP)",
+      "providers": [
+        {
+          "id": "1e1456e7d7c23095983ab90efaa6841f",
+          "name": "MDS-USA"
+        },
+        {
+          "id": "271e3e476c2613cc571c2f418e249bd7",
+          "name": "Acme Bioscience"
+        },
+        ...
+      ],
+      "score": null,
       "urls": {
-        "storefront":"https://www.assaydepot.com/service/peroxidase-assay",
-        "backoffice":"https://backoffice.assaydepot.com/wares/peroxidase-assay/edit"
+        "storefront": "https://staging.assaydepot.com/service/90-d-subchronic-tox-study-mouse7",
+        "backoffice": "https://backoffice-staging.assaydepot.com/wares/90-d-subchronic-tox-study-mouse7/edit"
       }
     },
     {
-      "id":"0f5f25412f247ab0d4bbb371d8ef25ce",
-      "slug":"peroxide-assay",
-      "name":"Peroxide Assay",
-      "price":15.0,
-      "type":"Service",
-      "turn_around_time":null,
-      "snippet":"Quantitative colorimetric assay (OD585 nm) of peroxide. Detection limit: 0.4 uM",
-      "provider_ids":[ "8e39547108653317bb668eb774f31a01" ],
-      "provider_names":[ "BioAssay Systems" ],
-      "score":3.5326707,
+      "id": "1240501c6efc3efb0a5b820331a70597",
+      "slug": "target-based-library-design",
+      "name": "Library Design",
+      "price": 0.0,
+      "average_rating": null,
+      "type": "CustomService",
+      "turn_around_time": null,
+      "snippet": "Click here to request a quote to design a focused library for lead optimization",
+      "providers": [
+        {
+          "id": "59ee7223992aecf96f1e155b75619e94",
+          "name": "Sapient Discovery"
+        },
+        {
+          "id": "26cf7be3d1f5920aca36064db26f8920",
+          "name": "SimBioSys"
+        },
+        ...
+      ],
+      "score": null,
       "urls": {
-        "storefront":"https://www.assaydepot.com/service/peroxide-assay",
-        "backoffice":"https://backoffice.assaydepot.com/wares/peroxide-assay/edit"
+        "storefront": "https://staging.assaydepot.com/service/target-based-library-design",
+        "backoffice": "https://backoffice-staging.assaydepot.com/wares/target-based-library-design/edit"
       }
     },
     ...
-  ]
+ ]
 }
 {% endhighlight %}
 
