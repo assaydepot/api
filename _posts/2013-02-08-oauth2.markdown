@@ -6,7 +6,7 @@ title: Assay Depot's OAuth2 Authentication
 # OAuth 2.0 Authentication
 
 To access Assay Depot's JSON API, you must first authenticate your
-applicationo via the OAuth2 protocol. We currently support two
+application via the OAuth2 protocol. We currently support two
 authorization grant types: <a href="#authcode">Authorization Code</a>
 and <a href="#clientcred">Client Credentials</a>.
 
