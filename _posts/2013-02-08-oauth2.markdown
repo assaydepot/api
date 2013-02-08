@@ -1,0 +1,40 @@
+---
+layout: default
+title: Assay Depot's OAuth2 Authentication
+---
+
+# OAuth 2.0 Authentication
+
+To access Assay Depot's JSON API, you must first authenticate your
+applicationo via the OAuth2 protocol. We currently support two
+authorization grant types: <a href="#authcode">Authorization Code</a>
+and <a href="#clientcred">Client Credentials</a>.
+
+This page is not intended to be in-depth documentation for the OAuth
+2.0 Framework. For detailed information about OAuth 2.0, you can check
+out these resources:
+
+* [OAuth 2.0](http://oauth.net/2/)
+* [OAuth 2.0 Authorization of client applications.](http://tutorials.jenkov.com/oauth2/authorization.html)
+
+<h2 id="authcode">Authorization Code</h2>
+
+Use the Authorizaton Code grant type for an application that requires
+the user to log in, most commonly to access resources that are
+specific to that user on the server. Examples: user profile details or
+access to a user's communication history.
+
+<h2 id="clientcred">Client Credentials</h2>
+
+Use the Client Credentials grant type for an application that requires
+access to resources that do not have a resource owner on the
+server. Examples: a search by keywords or accessing a specific ware.
+
+## Create a New Application Under Your Assay Depot Account</h2>
+
+1. Log in to your Assay Depot account and click **Dashboard**
+2. Click **Edit My Profile**
+3. Choose the **Applications** tab
+4. Click **New Application**
+5. Fill in the fields as appropriate and click **Create**
+6. Once created, click **Show** to obtain your App ID and App Secret.
