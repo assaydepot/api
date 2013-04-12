@@ -4,7 +4,7 @@ title: Assay Depot's JSON API
 ---
 
 # JSON API Documentation
-Assay Depot's JSON API gives read-only access to vendors and services. To use the API you must [/api/oauth2](authenticate using OAuth2).
+Assay Depot's JSON API gives read-only access to vendors and services. To use the API you must [authenticate using OAuth2](/api/oauth2).
 
 <h2 id="location">Location</h2>
 The API is accessible at `/api` on whatever website you use. For instance, public marketplace customers (users of [http://www.assaydepot.com](http://www.assaydepot.com)) can access the api at:
@@ -26,7 +26,7 @@ https://[custom].assaydepot.com/api
 {% endhighlight %}
 
 <h2 id="authentication">Authentication</h2>
-The API requires the user to authenticate. To use the API you must [/api/oauth2](authenticate using OAuth2). Assay Depot supports both Authorization Code and Client Credential workflows.
+The API requires the user to authenticate. To use the API you must [authenticate using OAuth2](/api/oauth2). Assay Depot supports both Authorization Code and Client Credential workflows.
 
 You can specify the authentication token on the query string using the `access_token` query parameter. For instance:
 
