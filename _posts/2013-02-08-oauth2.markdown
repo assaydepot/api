@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Assay Depot's OAuth2 Authentication
+title: Scientist's OAuth2 Authentication
 ---
 
 # OAuth 2.0 Authentication
 
-To access Assay Depot's JSON API, you must first authenticate your
+To access Scientist's (formerly Assay Depot) JSON API, you must first authenticate your
 application via the OAuth2 protocol. We currently support two
 authorization grant types: <a href="#authcode">Authorization Code</a>
 and <a href="#clientcred">Client Credentials</a>.

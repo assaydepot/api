@@ -1,22 +1,22 @@
 ---
 layout: default
-title: Assay Depot's JSON API
+title: Scientist's JSON API
 ---
 
 # JSON API Documentation
-Assay Depot's JSON API gives read-only access to vendors and services. To use the API you must [authenticate using OAuth2](/api/oauth2).
+Scientist's (formerly Assay Depot) JSON API gives read-only access to vendors and services. To use the API you must [authenticate using OAuth2](/api/oauth2).
 
 <h2 id="location">Location</h2>
-The API is accessible at `/api` on whatever website you use. For instance, public marketplace customers (users of [http://www.assaydepot.com](http://www.assaydepot.com)) can access the api at:
+The API is accessible at `/api` on whatever website you use. For instance, public marketplace customers (users of [http://app.scientist.com](http://app.scientist.com)) can access the api at:
 
 {% highlight bash %}
-https://www.assaydepot.com/api
+https://app.scientist.com/api
 {% endhighlight %}
 
 Vendors can access the api at:
 
 {% highlight bash %}
-https://backoffice.assaydepot.com/api
+https://backoffice.scientist.com/api
 {% endhighlight %}
 
 And private RX customers can access the api using their custom URL:
@@ -31,25 +31,25 @@ The API requires the user to authenticate. To use the API you must [authenticate
 You can specify the authentication token on the query string using the `access_token` query parameter. For instance:
 
 {% highlight bash %}
-https://www.assaydepot.com/api/[resource].json?access_token=1234567890
+https://app.scientist.com/api/[resource].json?access_token=1234567890
 {% endhighlight %}
 
 The authentication token is only strictly required for the first request of the session, but you may include it with every request. All examples assume the user has successfully authenticated.
 
 <h2 id="vendors">Vendors</h2>
-There are two functions you can perform on vendors, search and get. 
+There are two functions you can perform on vendors, search and get.
 
 <h3 id="vendor-search">Vendor Search Query</h3>
 Search queries take the form:
 
 {% highlight bash %}
-https://www.assaydepot.com/api/providers.json?q=[query term(s)]
+https://app.scientist.com/api/providers.json?q=[query term(s)]
 {% endhighlight %}
 
 For example, to search for vendors that match the term "antibody", you would use the url:
 
 {% highlight bash %}
-https://www.assaydepot.com/api/providers.json?q=antibody
+https://app.scientist.com/api/providers.json?q=antibody
 {% endhighlight %}
 
 The system will search for the word antibody or it's synonyms in all applicable vendor fields.
@@ -86,13 +86,13 @@ The system will search for the word antibody or it's synonyms in all applicable 
 Vendor search results can be refined using facets. To apply a facet to a search use a URL in the following format:
 
 {% highlight bash %}
-https://www.assaydepot.com/api/providers.json?facets[facet_name][]=facet_value
+https://app.scientist.com/api/providers.json?facets[facet_name][]=facet_value
 {% endhighlight %}
 
 For instance, if you wanted find vendors that are members of BIOCOM, you would use the following URL:
 
 {% highlight bash %}
-https://www.assaydepot.com/api/providers.json?facets[professional_associations][]=BIOCOM
+https://app.scientist.com/api/providers.json?facets[professional_associations][]=BIOCOM
 {% endhighlight %}
 
 You may specify multiple facets in a single query. It's important to note, unlike the query string, facet values must match exactly.
@@ -198,8 +198,8 @@ This will return:
         ...
       ],
       "urls": {
-        "storefront":"https://www.assaydepot.com/provider/assay-depot",
-        "backoffice":"https://backoffice.assaydepot.com/providers/assay-depot/edit"
+        "storefront":"https://app.scientist.com/provider/assay-depot",
+        "backoffice":"https://backoffice.scientist.com/providers/assay-depot/edit"
       }
     },
     {
@@ -218,8 +218,8 @@ This will return:
         ...
       ],
       "urls": {
-        "storefront":"https://www.assaydepot.com/provider/assay-biotechnology-company",
-        "backoffice":"https://backoffice.assaydepot.com/providers/assay-biotechnology-company/edit"
+        "storefront":"https://app.scientist.com/provider/assay-biotechnology-company",
+        "backoffice":"https://backoffice.scientist.com/providers/assay-biotechnology-company/edit"
       }
     },
     ...
@@ -231,7 +231,7 @@ This will return:
 Get queries take the form:
 
 {% highlight bash %}
-https://www.assaydepot.com/api/providers/[provider_id].json
+https://app.scientist.com/api/providers/[provider_id].json
 {% endhighlight %}
 
 <h3 id="vendor-detail-results">Vendor Details Return Value</h3>
@@ -245,7 +245,7 @@ This will return:
     "slug":"assay-depot",
     "name":"Assay Depot",
     "phone_number":"(877)644-3044",
-    "website":"http://www.assaydepot.com",
+    "website":"http://app.scientist.com",
     "service_areas":[],
     "headquarters":"San Diego,
      California,
@@ -254,7 +254,7 @@ This will return:
     "year_established":"2007",
     "number_of_employees":"10",
     "description":
-      "!<http://backoffice.assaydepot.com/assets/depot-wares/ae82d9d2c9dd4902be154a3202646689/logo.png(Assay Depot Logo)!:http://www.assaydepot.com\r\n\r\np<>. *Assay Depot* has created the world\u2019s largest network of public and private cloud-based research exchanges. Researchers from around the world use the public research exchange to find,
+      "!<http://backoffice.scientist.com/assets/depot-wares/ae82d9d2c9dd4902be154a3202646689/logo.png(Assay Depot Logo)!:http://app.scientist.com\r\n\r\np<>. *Assay Depot* has created the world\u2019s largest network of public and private cloud-based research exchanges. Researchers from around the world use the public research exchange to find,
       compare and purchase research services,
       ...
       ",
@@ -270,27 +270,27 @@ This will return:
     "created_at":"2009-07-15T22:11:12+00:00",
     "updated_at":"2012-05-11T23:23:40Z",
     "urls": {
-      "storefront":"https://www.assaydepot.com/provider/assay-depot",
-      "backoffice":"https://backoffice.assaydepot.com/providers/assay-depot/edit"
+      "storefront":"https://app.scientist.com/provider/assay-depot",
+      "backoffice":"https://backoffice.scientist.com/providers/assay-depot/edit"
     }
   }
 }
 {% endhighlight %}
 
 <h2 id="services">Services</h2>
-There are two functions you can perform on services, search and get. 
+There are two functions you can perform on services, search and get.
 
 <h3 id="service-search">Service Search Query</h3>
 Search queries take the form:
 
 {% highlight bash %}
-https://www.assaydepot.com/api/wares.json?q=[query term(s)]
+https://app.scientist.com/api/wares.json?q=[query term(s)]
 {% endhighlight %}
 
 For example, to search for services that match the term "peptide", you would use the url:
 
 {% highlight bash %}
-https://www.assaydepot.com/api/wares.json?q=peptide
+https://app.scientist.com/api/wares.json?q=peptide
 {% endhighlight %}
 
 The system will search for the word antibody or it's synonyms in all applicable service fields.
@@ -326,13 +326,13 @@ The system will search for the word antibody or it's synonyms in all applicable 
 Service search results can be refined using facets. To apply a facet to a search use a URL in the following format:
 
 {% highlight bash %}
-https://www.assaydepot.com/api/wares.json?facets[facet_name][]=facet_value
+https://app.scientist.com/api/wares.json?facets[facet_name][]=facet_value
 {% endhighlight %}
 
 For instance, if you wanted find services where Assay Depot was available as a provider, you would use the URL:
 
 {% highlight bash %}
-https://www.assaydepot.com/api/wares.json?facets[available_provider_names][]=Assay+Depot
+https://app.scientist.com/api/wares.json?facets[available_provider_names][]=Assay+Depot
 {% endhighlight %}
 
 You may specify multiple facets in a single query. It's important to note, unlike the query string, facet values must match exactly.
@@ -479,7 +479,7 @@ This will return:
 Get queries take the form:
 
 {% highlight bash %}
-https://www.assaydepot.com/api/wares/[ware_id].json
+https://app.scientist.com/api/wares/[ware_id].json
 {% endhighlight %}
 
 <h3 id="service-detail-results">Service Details Return Value</h3>
@@ -501,7 +501,7 @@ This will return:
     "type":"CustomService",
     "snippet":"Request information or a price quote for Antibody Services",
     "description":
-      "<img src=\"https://backoffice.assaydepot.com/files/depot-wares/36aa2c0aa802cd048206c619a9689918/antibody-services2.png\" alt=\"Antibody Services Image\" style=\"margin-right: 10px; width: 90px; float: left;\" />\r\n\r\n\r\np<>. If you'd like to narrow down the type of service or product you are looking for,
+      "<img src=\"https://backoffice.scientist.com/files/depot-wares/36aa2c0aa802cd048206c619a9689918/antibody-services2.png\" alt=\"Antibody Services Image\" style=\"margin-right: 10px; width: 90px; float: left;\" />\r\n\r\n\r\np<>. If you'd like to narrow down the type of service or product you are looking for,
        choose from one of our Antibody Subcategories below. If you're unsure what you need,
        ...
        ",
@@ -527,8 +527,8 @@ This will return:
     "created_at":"2009-10-07T00:26:00+00:00",
     "updated_at":"2012-07-13T15:33:57Z",
     "urls": {
-      "storefront":"https://www.assaydepot.com/service/antibody-services",
-      "backoffice":"https://backoffice.assaydepot.com/wares/antibody-services/edit"
+      "storefront":"https://app.scientist.com/service/antibody-services",
+      "backoffice":"https://backoffice.scientist.com/wares/antibody-services/edit"
     }
   }
 }
@@ -538,5 +538,5 @@ This will return:
 Any number of options can be combined in a single query. For instance, the following (contrived) example, lists the first page of services that match the string "fluid" and are associated with the species Human. It also sets the page size to 2 and the authentication token to 1234567890.
 
 {% highlight bash %}
-https://www.assaydepot.com/api/wares.json?q=fluid&facets[species][]=Human&page=1&per_page=2&access_token=1234567890
+https://app.scientist.com/api/wares.json?q=fluid&facets[species][]=Human&page=1&per_page=2&access_token=1234567890
 {% endhighlight %}
