@@ -30,9 +30,9 @@ Use the Client Credentials grant type for an application that requires
 access to resources that do not have a resource owner on the
 server. Examples: a search by keywords or accessing a specific ware.
 
-## Create a New Application Under Your Assay Depot Account</h2>
+## Create a New Application Under Your Scientist Account</h2>
 
-1. Log in to your Assay Depot account and click **Dashboard**
+1. Log in to your Scientist account and click **Dashboard**
 2. Click **Edit My Profile**
 3. Choose the **Applications** tab
 4. Click **New Application**
