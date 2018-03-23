@@ -1,5 +1,4 @@
-markdown: rdiscount
-pygments: true
+rouge: true
 permalink: none
 exlude:
   - design
