@@ -445,8 +445,8 @@ This will return:
       ],
       "score": null,
       "urls": {
-        "storefront": "https://staging.assaydepot.com/service/90-d-subchronic-tox-study-mouse7",
-        "backoffice": "https://backoffice-staging.assaydepot.com/wares/90-d-subchronic-tox-study-mouse7/edit"
+        "storefront": "https://staging.scientist.com/service/90-d-subchronic-tox-study-mouse7",
+        "backoffice": "https://backoffice-staging.scientist.com/wares/90-d-subchronic-tox-study-mouse7/edit"
       }
     },
     {
@@ -471,8 +471,8 @@ This will return:
       ],
       "score": null,
       "urls": {
-        "storefront": "https://staging.assaydepot.com/service/target-based-library-design",
-        "backoffice": "https://backoffice-staging.assaydepot.com/wares/target-based-library-design/edit"
+        "storefront": "https://staging.scientist.com/service/target-based-library-design",
+        "backoffice": "https://backoffice-staging.scientist.com/wares/target-based-library-design/edit"
       }
     },
     ...
