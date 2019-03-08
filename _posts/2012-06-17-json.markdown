@@ -26,7 +26,7 @@ https://[custom].scientist.com/api
 {% endhighlight %}
 
 <h2 id="authentication">Authentication</h2>
-The API requires the user to authenticate. To use the API you must [authenticate using OAuth2](/api/oauth2). Scientist supports both Authorization Code and Client Credential workflows.
+The API requires the user to authenticate. To use the API you must [authenticate using OAuth2](/oauth2). Scientist supports both Authorization Code and Client Credential workflows.
 
 You should specify the authentication token using the `Authorization` header. For instance:
 
